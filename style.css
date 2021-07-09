@@ -1,0 +1,504 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500|Ubuntu:400,700&display=swap");
+
+:root {
+  --white: #fff;
+  --orange: rgb(255, 138, 91);
+  --gray: #555;
+  --moka: #fceade;
+  --black: #000;
+  --transition: 0.4s ease;
+  --bodyFont: "Roboto", sans-serif;
+  --headings: "Ubuntu", sans-serif;
+}
+
+/***************
+basic styles
+***************/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--bodyFont);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--headings);
+}
+
+.py-5 {
+  padding: 100px 0 !important;
+}
+
+.titleText h2 {
+  color: var(--orange);
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+/***************
+ nav 
+***************/
+.navbar {
+  border-top: 6px solid var(--orange);
+  background: var(--black);
+  padding: 0;
+}
+
+.navbar-brand {
+  background: var(--orange);
+  padding: 15px 40px;
+  font-style: italic;
+  color: var(--white);
+  font-size: 1.7rem;
+  transition: var(--transition);
+}
+
+.navbar-brand:hover {
+  color: var(--black);
+}
+
+.navbar .nav-link {
+  color: var(--orange);
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+.navbar .nav-link:hover {
+  color: var(--moka);
+}
+
+/***************
+baner
+***************/
+#baner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.99)),
+    url(img/banner.jpg);
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+#baner::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--black);
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  transform: skewY(7deg);
+  transform-origin: left bottom;
+}
+
+#baner .row {
+  height: 80vh;
+}
+
+#baner h2 {
+  color: var(--orange);
+  margin-bottom: 30px;
+}
+
+#baner .btnLink {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 15px 25px;
+  border: 2px solid var(--orange);
+  background: transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: var(--white);
+  border-radius: 0;
+}
+
+#baner .btnLink:hover {
+  background: var(--orange);
+  color: var(--black);
+}
+
+/***************
+bannerIcons
+***************/
+#bannerIcons {
+  margin-top: -100px;
+}
+
+#bannerIcons ul li {
+  background: var(--orange);
+  padding: 15px 15px 0px 15px;
+  margin: 0 10px;
+  color: var(--white);
+}
+
+#bannerIcons i {
+  font-size: 50px;
+  transition: var(--transition);
+}
+
+#bannerIcons i:hover {
+  color: var(--black);
+}
+
+/***************
+services
+***************/
+#services i {
+  background: var(--orange);
+  padding: 50px;
+  font-size: 4rem;
+  color: var(--white);
+  transition: var(--transition);
+}
+
+#services i:hover {
+  color: var(--orange);
+  background: var(--black);
+}
+
+#services .fa-apple {
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+#services .fa-android {
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+#services .fa-php {
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+}
+
+#services .fa-js {
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
+
+/***************
+contact
+***************/
+#contact {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(img/contact.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  clip-path: polygon(0 25%, 100% 0%, 100% 75%, 0% 100%);
+  height: 70vh;
+}
+
+#contact .row {
+  height: 60vh;
+}
+
+#contact .formBtn {
+  background: transparent;
+  border: 3px solid var(--orange);
+  border-radius: 0;
+  font-size: 2.5rem;
+  color: var(--orange);
+}
+
+#contact h2 {
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+
+#contact input {
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid var(--white);
+  width: 60%;
+  font-size: 2.5rem;
+  margin-right: 30px;
+  position: relative;
+  top: 16px;
+}
+
+::placeholder {
+  color: var(--moka);
+}
+
+/***************
+team
+***************/
+#team .col-md-8 {
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 5%,
+    100% 95%,
+    70% 100%,
+    30% 100%,
+    0 94%,
+    0 5%
+  );
+}
+
+#team .carousel-caption {
+  color: var(--orange);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/***************
+about
+***************/
+#about {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(img/about-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+  padding: 100px 0 200px 0;
+}
+
+#about img {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+#about .card-header {
+  background: var(--orange);
+}
+
+#about .btn-link {
+  color: var(--black);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+#about .btn-link:hover {
+  color: var(--white);
+}
+
+#about .card {
+  border: 1px solid var(--black);
+}
+
+/***************
+projects
+***************/
+#projects .col-lg-3 {
+  padding: 0;
+}
+
+#projects .imgContainer {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  position: relative;
+  overflow: hidden;
+}
+
+#projects .imgContainer img:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+#projects .imgIcons {
+  position: absolute;
+  bottom: -10rem;
+  padding: 30px 0;
+  width: 100%;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.7)
+  );
+  transition: bottom 1.5s;
+}
+
+#projects .imgContainer:hover .imgIcons {
+  bottom: 0;
+}
+
+#projects i {
+  color: var(--orange);
+  font-size: 35px;
+  margin: 0 10px;
+  transition: var(--transition);
+}
+
+#projects i:hover {
+  color: var(--black);
+}
+
+/***************
+people
+***************/
+#people img {
+  width: 80%;
+  margin: -100px auto 0 auto;
+  border-radius: 50%;
+}
+
+#people .row:nth-child(2) {
+  margin-top: 150px;
+}
+
+#people hr {
+  background: var(--orange);
+}
+
+#people i {
+  color: var(--orange);
+  font-size: 30px;
+  transition: var(--transition);
+}
+
+#people i:hover {
+  color: var(--gray);
+}
+
+/***************
+skills
+***************/
+#skills {
+  background-image: linear-gradient(
+      rgba(255, 138, 91, 0.8),
+      rgba(255, 138, 91, 0.8)
+    ),
+    url(img/progress.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+  padding: 150px 0;
+}
+
+#skills .progress {
+  height: 3px;
+}
+
+#skills .progress-bar {
+  background: var(--black);
+}
+
+.single-progress {
+  margin-bottom: 15px;
+}
+
+/***************
+pricing
+***************/
+#pricing .card {
+  border-radius: 0;
+}
+
+#pricing .card-title {
+  padding-top: 20px;
+}
+
+.priceNum {
+  position: relative;
+  background: var(--moka);
+  padding: 10px 0;
+}
+
+.money {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  font-size: 25px;
+}
+
+.moneyNum {
+  font-size: 60px;
+}
+
+.moneyEnd {
+  font-size: 20px;
+}
+
+#pricing .list-group-item {
+  font-size: 12px;
+}
+
+.pricingBtn {
+  background: var(--orange);
+  border-radius: 0;
+}
+
+.pricingBtn:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+#pricing .col-lg-3:last-child .priceNum {
+  background: var(--orange);
+}
+
+#pricing .list-group li:first-child {
+  padding-top: 30px;
+  border-top: none;
+}
+
+#pricing .list-group-item:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#pricing .list-group-item:last-child {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/***************
+footer
+***************/
+footer {
+  background: var(--black);
+  color: var(--white);
+}
+
+footer h2,
+footer i {
+  color: var(--orange);
+}
+
+@media (max-width: 767px) {
+  .display-1 {
+    font-size: 3rem;
+  }
+
+  .d-flex {
+    display: flex;
+  }
+
+  #bannerIcons ul li {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  #baner .btnLink {
+    font-size: 15px;
+    padding: 7px 10px;
+
+    border-radius: 0;
+  }
+
+  #contact h2 {
+    font-size: 3rem;
+  }
+
+  #contact .formBtn {
+    font-size: 1rem;
+  }
+
+  #contact input {
+    margin-bottom: 50px;
+  }
+
+  #people img {
+    width: 80%;
+    margin: 0 auto 0 auto;
+    border-radius: 50%;
+  }
+}
+
+a {
+  display: flex;
+  flex-direction: row;
+}
